@@ -8,17 +8,15 @@ module.exports.solution = (inputs) => {
 
   inputs.split('\n')
     .forEach((input) => {
-      const [ls, hs, cs] = input.split('x')
+      const [n1, n2, n3] = input.split('x')
+        .map(n => parseInt(n, 10))
+        .sort((a, b) => a > b)
 
-      const l = parseInt(ls)
-      const h = parseInt(hs)
-      const c = parseInt(cs)
-
-      result += 2 * (l + h)
-      result += l * h * c
+      result += 2 * (n1 + n2)
+      result += n1 * n2 * n3
     })
 
   return result
 }
 
-module.exports.expectedResult = 3798106
+module.exports.expectedResult = 3783758
