@@ -1,27 +1,27 @@
 const { runTest } = require('../../lib/helper')
 
 const tests = [
-  ['(())', 0],
-  ['()()', 0],
-  ['(((', 3],
-  ['(()(()(', 3],
-  ['))(((((', 3],
-  ['())', -1],
-  ['())', -1],
-  [')))', -3],
-  [')())())', -3],
+  [')', 1],
+  ['()())', 5],
 ]
 
 const solution = (input) => {
+  let acc = 0
   let result = 0
+
   input.split('')
-    .forEach((char) => {
+    .forEach((char, index) => {
       if (char === '(') {
-        result += 1
+        acc += 1
       } else if (char === ')') {
-        result -= 1
+        acc -= 1
+      }
+
+      if (acc === -1 && !result) {
+        result = index + 1
       }
     })
+
   return result
 }
 
