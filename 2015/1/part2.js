@@ -1,11 +1,9 @@
-const { runTest } = require('../../lib/helper')
-
-const tests = [
+module.exports.tests = [
   [')', 1],
   ['()())', 5],
 ]
 
-const solution = (input) => {
+module.exports.solution = (input) => {
   let acc = 0
   let result = 0
 
@@ -24,5 +22,3 @@ const solution = (input) => {
 
   return result
 }
-
-runTest(solution, tests, __dirname)

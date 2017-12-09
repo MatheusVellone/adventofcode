@@ -1,6 +1,4 @@
-const { runTest } = require('../../lib/helper')
-
-const tests = [
+module.exports.tests = [
   ['(())', 0],
   ['()()', 0],
   ['(((', 3],
@@ -12,7 +10,7 @@ const tests = [
   [')())())', -3],
 ]
 
-const solution = (input) => {
+module.exports.solution = (input) => {
   let result = 0
 
   input.split('')
@@ -26,5 +24,3 @@ const solution = (input) => {
 
   return result
 }
-
-runTest(solution, tests, __dirname)
