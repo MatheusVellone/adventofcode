@@ -2,6 +2,9 @@ const path = require('path')
 const fs = require('fs')
 const { green, red, bold } = require('chalk')
 
+const expectedErrorMessage = (expected, received, input = false) => {
+  return red(`Expected ${bold(expected)} but got ${bold(received)}${input ? ` for input ${bold(input)}` : ''}`)
+}
 const loadTestInput = (dirname) => {
   const inputPath = path.join(dirname, 'input.txt')
   return fs.readFileSync(inputPath, 'utf8')
@@ -14,14 +17,14 @@ const validate = (solve, tests) => {
       const output = solve(input)
 
       if (expectedOutput !== output) {
-        return `Expected ${bold(expectedOutput)} but got ${bold(output)} for input ${bold(input)}`
+        return expectedErrorMessage(expectedOutput, output, input)
       }
       return false
     })
     .filter(error => error)
 
   if (errors.length) {
-    console.log(red(errors.join('\n')))
+    console.log(errors.join('\n'))
     return false
   }
 
@@ -36,14 +39,25 @@ const runTest = (year, day, part) => {
     return
   }
 
-  const { solution, tests } = require(filename)
+  const { solution, tests, expectedResult } = require(filename)
   if (!validate(solution, tests)) {
     return
   }
 
   const input = loadTestInput(dirname)
-  const result = green(solution(input))
-  console.log(`${bold(year)}-${bold(day)}_${bold(part)} = ${result}`)
+  const result = solution(input)
+  const challengeIdentifier = `${bold(year)}-${bold(day)}_${bold(part)}`
+
+  if (!expectedResult) {
+    console.log(`${challengeIdentifier} = ${bold(result)}`)
+  } else {
+    if (result === expectedResult) {
+      console.log(`${challengeIdentifier}: ${bold(green('OK'))}`)
+    } else {
+      console.log(`${challengeIdentifier}: ${expectedErrorMessage(expectedResult, result)}`)
+    }
+  }
+
 }
 
 const allYears = [2015, 2016, 2017]

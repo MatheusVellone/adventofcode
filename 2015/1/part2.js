@@ -22,3 +22,5 @@ module.exports.solution = (input) => {
 
   return result
 }
+
+module.exports.expectedResult = 1795
