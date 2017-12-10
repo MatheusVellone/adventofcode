@@ -9,7 +9,7 @@
 | [4][2015_4]   | :white_check_mark: | :white_check_mark: |
 | [5][2015_5]   | :white_check_mark: | :white_check_mark: |
 | [6][2015_6]   | :white_check_mark: | :white_check_mark: |
-| [7][2015_7]   | | |
+| [7][2015_7]   | :white_check_mark: | :white_check_mark: |
 | [8][2015_8]   | | |
 | [9][2015_9]   | | |
 | [10][2015_10] | | |
