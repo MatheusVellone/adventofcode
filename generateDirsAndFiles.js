@@ -52,6 +52,9 @@ const solutionFileTemplate = () => {
   template.push('module.exports.solution = () => {')
   template.push('')
   template.push('}')
+  template.push('')
+  template.push('module.exports.expectedResult = undefined')
+  template.push('')
 
   return template.join('\n')
 }
