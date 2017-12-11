@@ -62,4 +62,4 @@ module.exports.solution = (input) => {
   return result
 }
 
-module.exports.expectedResult = undefined
+module.exports.expectedResult = 2341

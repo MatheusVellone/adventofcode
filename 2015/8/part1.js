@@ -15,3 +15,5 @@ module.exports.solution = (inputs) => {
 
   return result
 }
+
+module.exports.expectedResult = 1342
