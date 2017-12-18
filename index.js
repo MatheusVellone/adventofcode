@@ -5,8 +5,11 @@ const { green, red, bold } = require('chalk')
 const expectedErrorMessage = (expected, received, input = false) => {
   return red(`Expected ${bold(expected)} but got ${bold(received)}${input ? ` for input ${bold(input)}` : ''}`)
 }
-const loadTestInput = (dirname) => {
-  const inputPath = path.join(dirname, 'input.txt')
+const loadTestInput = (dirname, part) => {
+  const inputPath = path.join(dirname, `input${part}.txt`)
+  if (!fs.existsSync(inputPath)) {
+    return loadTestInput(dirname, '')
+  }
   return fs.readFileSync(inputPath, 'utf8')
 }
 
@@ -44,7 +47,7 @@ const runTest = (year, day, part) => {
     return
   }
 
-  const input = loadTestInput(dirname)
+  const input = loadTestInput(dirname, part)
   const result = solution(input)
   const challengeIdentifier = `${bold(year)}-${bold(day)}_${bold(part)}`
 
