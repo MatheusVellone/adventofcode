@@ -1,7 +1,7 @@
 [Advent of Code - 2015/7](http://adventofcode.com/2015/day/7)
 ---------------------------
 
-### Day 7: Some Assembly Required
+--- Day 7: Some Assembly Required ---
 
 This year, Santa brought little Bobby Tables a set of wires and bitwise logic gates! Unfortunately, little Bobby is a little under the recommended age range, and he needs help assembling the circuit.
 
@@ -11,16 +11,14 @@ The included instructions booklet describes how to connect the parts together: x
 
 For example:
 
-- `123 -> x` means that the signal `123` is provided to `wire x`.
-- `x AND y -> z` means that the bitwise `AND` of `wire x` and `wire y` is provided to `wire z`.
-- `p LSHIFT 2 -> q` means that the value from `wire p` is `left-shifted` by `2` and then provided to `wire q`.
-- `NOT e -> f` means that the bitwise complement of the value from `wire e` is provided to `wire f`.
-
-Other possible gates include `OR` (bitwise OR) and `RSHIFT` (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
+123 -> x means that the signal 123 is provided to wire x.
+x AND y -> z means that the bitwise AND of wire x and wire y is provided to wire z.
+p LSHIFT 2 -> q means that the value from wire p is left-shifted by 2 and then provided to wire q.
+NOT e -> f means that the bitwise complement of the value from wire e is provided to wire f.
+Other possible gates include OR (bitwise OR) and RSHIFT (right-shift). If, for some reason, you'd like to emulate the circuit instead, almost all programming languages (for example, C, JavaScript, or Python) provide operators for these gates.
 
 For example, here is a simple circuit:
 
-```
 123 -> x
 456 -> y
 x AND y -> d
@@ -29,10 +27,8 @@ x LSHIFT 2 -> f
 y RSHIFT 2 -> g
 NOT x -> h
 NOT y -> i
-```
 After it is run, these are the signals on the wires:
 
-```
 d: 72
 e: 507
 f: 492
@@ -41,18 +37,8 @@ h: 65412
 i: 65079
 x: 123
 y: 456
-```
+In little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?
 
-<details>
-  <summary>In little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to `wire a`?</summary>
-  
-  `16076`
-</details>
+--- Part Two ---
 
-### Part Two
-
-<details>
-  <summary>Now, take the signal you got on wire a, override wire b to that signal, and reset the other wires (including wire a). What new signal is ultimately provided to wire a?</summary>
-  
-  `2797`
-</details>
+Now, take the signal you got on wire a, override wire b to that signal, and reset the other wires (including wire a). What new signal is ultimately provided to wire a?

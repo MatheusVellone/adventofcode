@@ -1,7 +1,7 @@
 [Advent of Code - 2015/4](http://adventofcode.com/2015/day/4)
 ---------------------------
 
-## Day 4: The Ideal Stocking Stuffer
+--- Day 4: The Ideal Stocking Stuffer ---
 
 Santa needs help mining some AdventCoins (very similar to bitcoins) to use as gifts for all the economically forward-thinking little girls and boys.
 
@@ -9,21 +9,9 @@ To do this, he needs to find MD5 hashes which, in hexadecimal, start with at lea
 
 For example:
 
-- If your secret key is `abcdef`, the answer is `609043`, because the MD5 hash of `abcdef609043` starts with five zeroes (`000001dbbfa...`), and it is the lowest such number to do so.
-- If your secret key is `pqrstuv`, the lowest number it combines with to make an MD5 hash starting with five zeroes is `1048970`; that is, the MD5 hash of `pqrstuv1048970` looks like `000006136ef....`
-
-<details>
-  <summary>Input: iwrupvqb</summary>
-  
-  `346386`
-</details>
+If your secret key is abcdef, the answer is 609043, because the MD5 hash of abcdef609043 starts with five zeroes (000001dbbfa...), and it is the lowest such number to do so.
+If your secret key is pqrstuv, the lowest number it combines with to make an MD5 hash starting with five zeroes is 1048970; that is, the MD5 hash of pqrstuv1048970 looks like 000006136ef....
 
 --- Part Two ---
 
 Now find one that starts with six zeroes.
-
-<details>
-  <summary>Input: iwrupvqb</summary>
-  
-  `9958218`
-</details>
