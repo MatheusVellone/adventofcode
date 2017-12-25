@@ -11,7 +11,7 @@ const commands = {
 }
 
 module.exports.solution = (inputs) => {
-  const grid = Array.apply(null, Array(1000)).map(() => Array.apply(null, Array(1000)).map(() => 0))
+  const grid = Array(...Array(1000)).map(() => Array(...Array(1000)).map(() => 0))
 
   const countGrid = () => {
     let result = 0

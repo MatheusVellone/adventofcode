@@ -47,4 +47,4 @@ module.exports.solution = (inputString) => {
   return getSum(input)
 }
 
-module.exports.expectedResult = undefined
+module.exports.expectedResult = 65402
