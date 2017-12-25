@@ -2,6 +2,7 @@
   "name": "adventofcode-challenges",
   "version": "0.0.1",
   "dependencies": {
-    "chalk": "^2.3.0"
+    "chalk": "^2.3.0",
+    "ramda": "^0.25.0"
   }
 }
