@@ -19,8 +19,8 @@
 | [14][2015_14] | :white_check_mark: | :white_check_mark: |
 | [15][2015_15] | | |
 | [16][2015_16] | :white_check_mark: | :white_check_mark: |
-| [17][2015_17] | | |
-| [18][2015_18] | | |
+| [17][2015_17] | :white_check_mark: | :white_check_mark: |
+| [18][2015_18] | :white_check_mark: | :white_check_mark: |
 | [19][2015_19] | | |
 | [20][2015_20] | | |
 | [21][2015_21] | | |
