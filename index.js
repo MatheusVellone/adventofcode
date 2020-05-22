@@ -71,7 +71,7 @@ const solvedEmoji = ':white_check_mark:'
 const regex = new RegExp(`\\|.*?\\| (${solvedEmoji})? \\| (${solvedEmoji})? \\|`)
 const updateReadme = (year, day, part) => {
   const HEADER_LINES = 4
-  const index = HEADER_LINES + Number(day)
+  const index = HEADER_LINES + Number(day) - 1
   const readmePath = path.join(__dirname, year.toString(), 'README.md')
 
   const readmeContent = fs.readFileSync(readmePath, 'utf8').split('\n')
