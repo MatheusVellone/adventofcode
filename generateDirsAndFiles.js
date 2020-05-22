@@ -1,7 +1,7 @@
 const { existsSync, mkdirSync, writeFileSync } = require('fs')
 const { join } = require('path')
 
-const years = ['2015', '2016', '2017', '2018']
+const years = ['2015', '2016', '2017', '2018', '2019']
 const days = []
 for (let i = 1; i <= 25; i++) {
   days.push(i.toString())
